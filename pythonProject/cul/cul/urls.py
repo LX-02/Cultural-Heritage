@@ -18,8 +18,11 @@ from django.urls import path
 
 # from cul.culapp.views import index
 import culapp.views as views
+# import cul.culapp.views as views
 
 urlpatterns = [
     path('', views.index ),
+    path('HebeiClapperOpera', views.HebeiClapperOpera ),
+    path('LaotingClayFigure', views.LaotingClayFigure ),
     path('admin/', admin.site.urls)
 ]

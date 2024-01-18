@@ -1,27 +1,116 @@
-<!DOCTYPE html>
+{% extends "base.html" %}
 {% load static %}
-{% load split %}
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <title>
-        {% block title %}
-            河北非遗-base
-        {% endblock title %}
-    </title>
-    <meta charset="utf-8">
-    {% block css %}
-    {% endblock css %}
-    <link rel="stylesheet" type="text/css" href="{% static 'css/base.css' %}">
-    
-</head>
-<body>
-<div>
-<!--    导航栏-->
-    <div>
+
+
+{% block title %}
+    河北非遗-首页
+{% endblock title %}
+
+
+{% block css %}
+    <link rel="stylesheet" type="text/css" href="{% static 'css/index.css' %}">
+    <link rel="stylesheet" type="text/css" href="{% static 'fonts/iconfont.css' %}">
+{% endblock css %}
+
+
+
+{% block main %}
+    <div class="main_bg" style="height: 1600px;">
+        <!-- 非遗代表作 master pieces-->
+        <div class="cont1">
+
+            <div class="subtitle clearfix">
+                <!-- 按钮 -->
+                <div class="fr clearfix">
+                    <div class="btn fr" onclick="prev()">
+                        &#xe715;
+                    </div>
+                    <div class="btn fr" onclick="next()">
+                        &#xe710;
+                    </div>
+                </div>
+                <!-- 小图标 标题 -->
+                <div>
+                    <div class="icon fl"> </div>
+                    <div class="txt">代表作名录</div>
+                </div>
+            </div>
+
+            <!-- 内容  -->
+            <div class="work">
+                <!-- 河北梆子 Hebei Clapper Opera  -->
+                <!-- 做等长or适应图片长度？ -->
+                <!-- 层次：色块、图片、名称 -->
+                <div class="subwork">
+                    <div class="color"></div>
+                    <div class="img">
+                        <img src="{% static 'img/HebeiClapperOpera/Hebei_YZL.jpg' %}">
+                    </div>
+                    <div class="txt">河北梆子</div>
+                </div>
+                <!-- 乐亭泥人 Laoting clay figure -->
+                <div class="subwork">
+                    <div class="color"></div>
+                    <div class="img">
+                        <img src="{% static 'img/LaotingClayFigure/乐亭泥人1.png' %}">
+                    </div>
+                    <div class="txt">乐亭泥人</div>
+                </div>
+                <!-- 乐亭泥人 Laoting clay figure -->
+                <div class="subwork">
+                    <div class="color"></div>
+                    <div class="img">
+                        <img src="{% static 'img/LaotingClayFigure/乐亭泥人1.png' %}">
+                    </div>
+                    <div class="txt">乐亭泥人</div>
+                </div>
+                <!-- 乐亭泥人 Laoting clay figure -->
+                <div class="subwork">
+                    <div class="color"></div>
+                    <div class="img">
+                        <img src="{% static 'img/LaotingClayFigure/乐亭泥人1.png' %}">
+                    </div>
+                    <div class="txt">乐亭泥人</div>
+                </div>
+                <!-- 乐亭泥人 Laoting clay figure -->
+                <div class="subwork">
+                    <div class="color"></div>
+                    <div class="img">
+                        <img src="{% static 'img/LaotingClayFigure/乐亭泥人1.png' %}">
+                    </div>
+                    <div class="txt">乐亭泥人</div>
+                </div>
+                <!-- 乐亭泥人 Laoting clay figure -->
+                <div class="subwork">
+                    <div class="color"></div>
+                    <div class="img">
+                        <img src="{% static 'img/LaotingClayFigure/乐亭泥人1.png' %}">
+                    </div>
+                    <div class="txt">乐亭泥人</div>
+                </div>
+            </div>
+            
+
+        </div>
+
+
+
+        <!-- 展览及活动 Exhibitions and Events -->
+        <div></div>
+
+
+        <!-- 手工艺者与群众的联系 relation -->
+        <div></div>
 
     </div>
-</div>
+              
 
-</body>
-</html>
+{% endblock main %}}
+
+
+
+{% block js %}
+    <script src="{% static 'js/index.js' %}"></script>
+    <script src="https://cdn.bootcss.com/jquery/1.10.2/jquery.min.js"></script>
+{% endblock js %}
+

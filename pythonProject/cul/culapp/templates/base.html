@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+{% load static %}
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>
+        {% block title %}
+        <!-- 每个页面的题目 -->
+            非遗-base-nav
+        {% endblock title %}
+    </title>
+    <meta charset="utf-8">
+    {% block css %}
+    <!-- 页面用到的Css文件 -->
+    {% endblock css %}
+    <link rel="stylesheet" type="text/css" href="{% static 'css/base.css' %}">
+    <link rel="stylesheet" type="text/css" href="{% static 'css/reset.css' %}">
+</head>
+<body class="bg">
+<div>
+    <!--    导航栏-->
+    <div class="nav clearfix">
+        <!-- 左侧：名称、logo（无） -->
+        <div class="logo fl">LOGO</div>
+        <div class="nav-l fl">河北省乡村非遗文化</div>
+        <!-- 右侧-->
+        <div class="nav-r fr">
+            <ul>
+                <li class="fl">
+                    <a href="#">首页</a>
+                </li>
+                <li class="fl">
+                    <a href="#">河北非遗</a>
+                </li>
+                <li class="fl">
+                    <a href="#">展览及活动</a>
+
+                </li>
+                <li class="fl">
+                    <a href="#">认识我们</a>
+                </li>
+            </ul>
+
+        </div>
+    </div>
+
+    <!-- 页面内容 -->
+    {% block main %}
+    <div class="lose">
+        hhh页面丢了
+    </div>
+    {% endblock main %}
+    
+</div>
+
+</body>
+    {% block js %}
+    <!-- 页面用到的js文件 -->
+    {% endblock js %}
+</html>

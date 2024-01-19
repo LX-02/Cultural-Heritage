@@ -75,7 +75,7 @@
     background: #890D00;
 }
 
-.img{
+.work .img{
     height: 240px;
 }
 
@@ -93,4 +93,93 @@
     border-top: solid #890D00 2px;
 }
 
+
+
+/* 手工艺者与群众的联系 */
+/* 手工艺者 craftsman */
+.man{
+    height: auto;
+}
+.cont2 .man{
+    height: 600px;
+    /* background: rgba(137, 13, 0, 0.1); */
+    /* opacity: 0.5; */
+}
+
+.cont2 .img{
+    width: 600px;
+    text-align: center;
+    line-height: 600px;
+    /* width: 100px; */
+    /* height: 100px; */
+    /* border: #890D00 solid 4px; */
+    /* border-radius: 50%; */
+}
+
+.cont2 .img img{
+    /* position: absolute; */
+}
+
+.cont2 .line{
+    height: 600px;
+    border-left: rgba(137, 13, 0, 0.3) solid 2px;
+    margin-left: 40px;
+}
+
+.cont2 .subname{
+    width: 50px;
+    height: 600px;
+    margin-right: 40px;
+}
+.cont2 .man_name {
+    margin-left: 600px;
+    /* display: flex; */
+    /* overflow: auto; */
+    /* 隐藏滚动条 */
+    scrollbar-width: none;          /* firefox  */
+    /* -ms-overflow-style: none;       IE 10+  */
+    overflow-y: auto;
+    overflow-x: auto; 
+
+    /* display: inline-block; */
+
+}
+
+/* 隐藏滚动条 */
+.cont2 .man_name::-webkit-scrollbar {
+    display: none; /* Chrome Safari */
+}
+
+/* 鼠标悬停 改变竖线颜色 */
+.cont2 .subname:hover .line{
+    border-left-color: rgba(137, 13, 0, 1);
+}
+
+/* 鼠标悬停 改变名字边框颜色 */
+.cont2 .subname:hover .name{
+    border-color: rgba(137, 13, 0, 1);
+}
+
+
+.cont2 .man .name{
+    font-size: 24px;
+    border: rgba(137, 13, 0, 0.3) 2px solid;
+    border-radius: 40px ;
+    background: #F0E4E4;
+    padding: 16px 6px;
+    margin: -400px 20px 0px 20px;   /* 位置高度改成随机!!!!!!!!!!!!!! */
+
+    /* 文字竖排 */
+    word-wrap: break-word;/*英文的时候需要加上这句，自动换行*/ 
+    /*自测了这句话没啥用*/
+    writing-mode: vertical-rl;/*从左向右 从右向左是 writing-mode: vertical-rl;*/  
+    writing-mode: tb-rl;/*IE浏览器的从左向右 从右向左是 writing-mode: tb-rl；*/ 
+    text-align: center;
+    display:flex;
+    -webkit-display:flex;
+    flex-direction:column; 
+    /* align-content: center; */
+    /* vertical-align: middle; */
+    justify-content:center;
+}
 

@@ -15,17 +15,17 @@
 
 
 {% block main %}
-    <div class="main_bg" style="height: 1600px;">
+    <div class="main_bg">
         <!-- 非遗代表作 master pieces-->
         <div class="cont1">
 
             <div class="subtitle clearfix">
                 <!-- 按钮 -->
                 <div class="fr clearfix">
-                    <div class="btn fr" onclick="prev()">
+                    <div class="btn fr" onclick="next()">
                         &#xe715;
                     </div>
-                    <div class="btn fr" onclick="next()">
+                    <div class="btn fr" onclick="prev()">
                         &#xe710;
                     </div>
                 </div>
@@ -56,13 +56,13 @@
                     </div>
                     <div class="txt">乐亭泥人</div>
                 </div>
-                <!-- 乐亭泥人 Laoting clay figure -->
+                <!-- 皮影戏 shadow puppets -->
                 <div class="subwork">
                     <div class="color"></div>
                     <div class="img">
-                        <img src="{% static 'img/LaotingClayFigure/乐亭泥人1.png' %}">
+                        <img src="{% static 'img/ShadowPuppets/3.png' %}">
                     </div>
-                    <div class="txt">乐亭泥人</div>
+                    <div class="txt">皮影戏</div>
                 </div>
                 <!-- 乐亭泥人 Laoting clay figure -->
                 <div class="subwork">
@@ -95,11 +95,66 @@
 
 
 
-        <!-- 展览及活动 Exhibitions and Events -->
-        <div></div>
-
-
         <!-- 手工艺者与群众的联系 relation -->
+        <!-- 手工艺者 craftsman -->
+        <div class="cont2">
+            <div class="subtitle clearfix">
+                <!-- 小图标 标题 -->
+                <div>
+                    <div class="icon fl"> </div>
+                    <div class="txt">手工艺者</div>
+                </div>
+            </div>
+            <!-- 内容 -->
+            <div class="man clearfix" height="100">
+
+                <!-- 左边：人物图片展示 -->
+                <!-- 层次：人物图（抠图） -->
+                <div class="img fl">
+                    <img src="{% static 'img/index/craftsman/皮影：王彪.png' %}">
+                </div>
+                <!-- 右侧：人物名称 -->
+                <!-- 图片没做 -->
+                <div class="man_name">
+                    <!-- 第一个: 竖线 名字 -->
+                    <div class="subname fl">
+                        <div class="line"></div>
+                        <div class="name">皮影：王彪</div>
+                    </div>
+                    <!-- 第2个: 竖线 名字 -->
+                    <div class="subname  fl">
+                        <div class="line"></div>
+                        <div class="name">皮影：汪海燕</div>
+                    </div>
+                    <!-- 第3个: 竖线 名字 -->
+                    <div class="subname fl">
+                        <div class="line"></div>
+                        <div class="name">京剧：朱绍玉</div>
+                    </div>
+                    <!-- 第4个: 竖线 名字 -->
+                    <div class="subname fl">
+                        <div class="line"></div>
+                        <div class="name">京剧：张幼麟</div>
+                    </div>
+                    <!-- 第5个: 竖线 名字 -->
+                    <div class="subname fl">
+                        <div class="line"></div>
+                        <div class="name">河北梆子：刘俊英</div>
+                    </div>
+                    <!-- 第6个: 竖线 名字 -->
+                    <div class="subname fl">
+                        <div class="line"></div>
+                        <div class="name">乐亭泥人：董壮壮</div>
+                    </div>
+                    
+                </div>
+
+            </div>
+
+        </div>
+
+
+        <!-- 展览及活动 Exhibitions and Events -->
         <div></div>
 
     </div>
@@ -110,7 +165,7 @@
 
 
 {% block js %}
-    <script src="{% static 'js/index.js' %}"></script>
-    <script src="https://cdn.bootcss.com/jquery/1.10.2/jquery.min.js"></script>
+    <script type="text/javascript" src="{% static 'js/jquery-1.12.4.min.js' %}"></script>
+    <script type="text/javascript" src="{% static 'js/index.js' %}"></script>
+    <!-- <script type="text/javascript" src="{% static 'js/jquery-1.12.4.min.js' %}"></script> -->
 {% endblock js %}
-

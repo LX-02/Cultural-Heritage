@@ -133,21 +133,20 @@
 }
 .cont2 .man_name {
     margin-left: 600px;
-    /* display: flex; */
-    /* overflow: auto; */
+    display: flex;
+    overflow: auto;
     /* 隐藏滚动条 */
     scrollbar-width: none;          /* firefox  */
-    /* -ms-overflow-style: none;       IE 10+  */
+    -ms-overflow-style: none;       /* IE 10+ */
     overflow-y: auto;
-    overflow-x: auto; 
+    overflow-x: hidden; 
 
-    /* display: inline-block; */
 
 }
 
 /* 隐藏滚动条 */
 .cont2 .man_name::-webkit-scrollbar {
-    display: none; /* Chrome Safari */
+    /* display: none; Chrome Safari */
 }
 
 /* 鼠标悬停 改变竖线颜色 */
@@ -170,10 +169,10 @@
     margin: -400px 20px 0px 20px;   /* 位置高度改成随机!!!!!!!!!!!!!! */
 
     /* 文字竖排 */
-    word-wrap: break-word;/*英文的时候需要加上这句，自动换行*/ 
+    word-wrap: break-word;      /*英文的时候需要加上这句，自动换行*/ 
     /*自测了这句话没啥用*/
-    writing-mode: vertical-rl;/*从左向右 从右向左是 writing-mode: vertical-rl;*/  
-    writing-mode: tb-rl;/*IE浏览器的从左向右 从右向左是 writing-mode: tb-rl；*/ 
+    writing-mode: vertical-rl;  /*从左向右 从右向左是 writing-mode: vertical-rl;*/  
+    writing-mode: tb-rl;        /*IE浏览器的从左向右 从右向左是 writing-mode: tb-rl；*/ 
     text-align: center;
     display:flex;
     -webkit-display:flex;

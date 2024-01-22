@@ -27,7 +27,7 @@ body, ul, li{
     margin: 0 auto;
     color: #000;
     /* background: #890D00; */
-    border-bottom: #000 solid 1px;    /*  最后删掉 */
+    /* border-bottom: #000 solid 1px;     最后删掉 */
 }
 
 .nav-l{

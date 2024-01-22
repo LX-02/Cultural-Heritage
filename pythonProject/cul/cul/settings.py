@@ -37,7 +37,7 @@ INSTALLED_APPS = [
     'django.contrib.sessions',
     'django.contrib.messages',
     'django.contrib.staticfiles',
-    'culapp'
+    'culapp',
 ]
 
 MIDDLEWARE = [
@@ -121,7 +121,8 @@ USE_TZ = True
 STATIC_URL = '/static/'
 # STATIC_ROOT = os.path.join(BASE_DIR, 'static1')
 STATICFILES_DIRS = [
-    os.path.join(BASE_DIR,"static")
+    # os.path.join(BASE_DIR,"culapp/static")
+    os.path.join(BASE_DIR,"culapp/static")
 ]
 
 

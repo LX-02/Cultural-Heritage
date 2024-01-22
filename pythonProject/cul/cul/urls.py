@@ -17,11 +17,14 @@ from django.contrib import admin
 from django.urls import path
 
 # from cul.culapp.views import index
-import culapp.views as views
+# import culapp.views as views
+from culapp import views
 # import cul.culapp.views as views
 
 urlpatterns = [
     path('', views.index ),
+    path('get_craftsman', views.get_craftsman),
+    path('get_number', views.get_number),
     path('HebeiClapperOpera', views.HebeiClapperOpera ),
     path('LaotingClayFigure', views.LaotingClayFigure ),
     path('admin/', admin.site.urls)

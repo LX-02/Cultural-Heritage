@@ -92,7 +92,7 @@ function get_craftsman(){
                 // console.log('value:', value)
                 $('.man_name').append(
 
-                    ' <div class="subname fl"> '
+                    ' <div class="subname fl" onmouseover="over(this)"> '
                     +    '<div class="line"></div>'
                     +    '<div class="name" style=" margin-top: -' + name_line_height() + 'px; "> '
                     +       value.item      // 皮影
@@ -101,7 +101,7 @@ function get_craftsman(){
                     +       '</div>'
                     + '</div>'
                 )
-            } )            
+            })            
         }
     }
     )       
@@ -133,32 +133,26 @@ function get_number( table ){
     return num
 }
 
+// 鼠标悬停时，更换为对应图片
 function over(this1){
-    console.log('hover_in:::::')
-    var   txt = $(this1).attr('class'); 
+    var   txt = this1.innerText; 
     console.log('txt', txt);
+    // 更换图片
+    $.ajax(
+        {
+        url:"get_number",
+        type:'post',  // 不指定默认就是get，都是小写
+        data: { txt
+                }, 
+        headers: {"X-CSRFToken": $.cookie('csrftoken')},
+        async : false,
+
+        success:function (response) {
+            console.log('response', response)
+            // num = response.num
+            // console.log('num', num)
+            }
+        }
+    )
 }
 
-// 鼠标悬停其他手工艺者的姓名，切换成对应手工艺者的图像
-// 11111111111111111111111111111111111111111111111111111111
-$(document).ready(function (){
-
-    console.log('craftaman_img:::')
-    // 获取鼠标悬停位置的姓名
-    // $('.cont2 .subname').click(function(){
-    //     console.log('11111111111')
-    // })
-    // $('.cont2 .subname').on('click', function(){
-    //     console.log('11111111111')
-    // })
-
-	$(".subname").onmouseover = function () {
-        console.log('hover_in:::::')
-	    var   txt = $(this).attr('class'); 
-	    console.log('txt', txt);
-    }
-
-    // 更改<img>的src
-    // $('.cont2 .img img')
-
-})

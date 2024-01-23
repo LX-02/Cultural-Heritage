@@ -37,10 +37,10 @@ def get_number(request):
         print('table:', table, 'num:', num)
         return JsonResponse({'num': num})
 
-# 非遗代表作名录部分 MasterPieces
+# 非遗代表作名录部分 MasterPieces ----------------------------
 
 
-# 手工艺者部分
+# 手工艺者部分 ------------------------------------
 
 # 获取手工艺者的信息
 def get_craftsman(request):
@@ -60,8 +60,7 @@ def get_craftsman(request):
     # print('craftsman:',craftsman)
     return JsonResponse({'craftsman':craftsman})
 
-
-# 根据item查询非遗项目名称
+# 根据craftaman表中的item查询非遗项目名称
 def get_pieces_name(item):
     pieces = models.MasterPieces.objects.filter(pieces_id = item)
     for value in pieces:
@@ -69,8 +68,14 @@ def get_pieces_name(item):
     print('name:', pieces_name)
     return pieces_name
 
+# 根据任务名称，获取对应人物图像路径
+def get_craftsman_img(request):
+    if request.method == 'POST':
+        name = request.POST.get('name', False)
+        print('request:', request)
 
-# 根据
+
+        return JsonResponse({'img':craftsman_img})
 
 
 # 判断图片是横版还是竖版

@@ -21,12 +21,13 @@ from django.urls import path
 from culapp.views import index
 from culapp.views import works_detail
 from culapp.views import craftsman_detail
+from culapp.views import chat
 # import cul.culapp.views as views
 
 urlpatterns = [
     path('base', index.base ),
     # 首页
-    path('', index.index ),
+    path('', index.index, name='index' ),
     path('logged', index.logged ),
     path('get_number', index.get_number),
     # 非遗代表作名录部分 MasterPieces ----------------------------
@@ -46,6 +47,9 @@ urlpatterns = [
 
     # 手工艺者详情 ------------------------------------
     path('craftsman_detail/LiuJunYing', craftsman_detail.LiuJunYing ),
+
+    # chat
+    path('chat/craftsman', chat.chat_craftsman),
 
     path('admin/', admin.site.urls)
 ]

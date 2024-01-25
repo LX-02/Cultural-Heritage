@@ -1,6 +1,6 @@
 /*主色调：
-红灰：#F0E4E4  rgb(137,13,0)
-红 #890D00 
+红灰：#F0E4E4  rgb(240, 228, 228)
+红 #890D00 rgb(137,13,0)
 页面: margin-left:80px（同右）
 */
 /* 全文字体 */
@@ -76,15 +76,27 @@ body, ul, li{
     line-height: 60px;
     margin-right: 80px;
 }
-.nav-r .ul2 li{
+.nav-r .ul2 .m1{
     margin: 0 26px;
+    position: relative;
 }
-.nav-r .ul2 li a:hover{
+.nav-r .ul2 .m1 a:hover{
     /* background: #890D00; */
     /* color:#ffffff; */
     color: #890D00;
     border-bottom: #890D00 2px solid;
 }
+.nav-r .m2{
+    display: none;
+    /* 设置初始为不显示 */
+    /* position: relative; */
+}
+#chat:hover .m2{
+    display: block;
+    background: rgb(240, 228, 228);
+}
+
+
 /* 主要页面 */
 .lose{
     font-size: 68px;

@@ -9,10 +9,10 @@ from culapp import models
 # MasterPieces admin model
 class MasterPiecesAdmin(admin.ModelAdmin):
     # 需要显示的字段信息
-    list_display = ('id', 'pieces_name')
+    list_display = ('id', 'pieces_name_ch', 'pieces_name_en')
 
     # 设置哪些字段可以点击进入编辑界面，默认是第一个字段
-    list_display_links = ('id', 'pieces_name')
+    list_display_links = ('id', 'pieces_name_ch', 'pieces_name_en')
 
     # 让ID显示为5位数
     def id(self, obj):
@@ -20,17 +20,16 @@ class MasterPiecesAdmin(admin.ModelAdmin):
             '<span>{}</span>',
             '%05d' % obj.pieces_id
         )
-
 admin.site.register(models.MasterPieces, MasterPiecesAdmin)
 
 
 # Craftsman admin model
 class CraftsmanAdmin(admin.ModelAdmin):
     # 需要显示的字段信息
-    list_display = ('id', 'craftsman_name', 'item_pieces_name')
+    list_display = ('id', 'craftsman_name_ch', 'item_pieces_name', 'craftsman_name_en')
 
     # 设置哪些字段可以点击进入编辑界面，默认是第一个字段
-    list_display_links = ('id', 'craftsman_name', 'item_pieces_name')
+    list_display_links = ('id', 'craftsman_name_ch', 'item_pieces_name', 'craftsman_name_en')
 
     # 让ID显示为5位数
     def id(self, obj):
@@ -41,11 +40,10 @@ class CraftsmanAdmin(admin.ModelAdmin):
     def item_pieces_name(self, obj):
         return format_html(
             '<span>{}</span>',
-            obj.item.pieces_name
+            obj.item.pieces_name_ch
         )
 
     item_pieces_name.short_description = '传承项目'
-
 admin.site.register(models.Craftsman, CraftsmanAdmin)
 
 

@@ -15,6 +15,7 @@
     {% endblock css %}
     <link rel="stylesheet" type="text/css" href="{% static 'css/base.css' %}">
     <link rel="stylesheet" type="text/css" href="{% static 'css/reset.css' %}">
+    <link rel="stylesheet" type="text/css" href="{% static 'fonts/fonts/iconfont.css' %}">
 </head>
 <body class="bg">
 <div>
@@ -23,21 +24,43 @@
         <!-- 左侧：名称、logo（无） -->
         <div class="logo fl">LOGO</div>
         <div class="nav-l fl">河北省乡村非遗文化</div>
-        <!-- 右侧-->
+        <!-- 右侧:两排-->
         <div class="nav-r fr">
-            <ul>
-                <li class="fl">
-                    <a href="#">首页</a>
+            <!-- 第一排（小）：交流（icon）、时间、登录（已登录显示用户名） -->
+            <ul class="ul1">
+                <li class="fr"  style="margin-right: 32px;">
+                    <a href="#" id="login">
+                        登录
+                    </a>
                 </li>
-                <li class="fl">
-                    <a href="#">河北非遗</a>
+                <li class="fr">
+                    <a href="#" id="time">
+                        时间
+                    </a>
                 </li>
-                <li class="fl">
+                <li class="fr iconfont">
+                    <a href="#">
+                        &#xe6b8;
+                    </a>
+                </li>
+            </ul>
+            <!-- 第二排（小）： -->
+            <ul class="ul2 clearfix">
+                <li class="fr">
+                    <a href="#">认识我们</a>
+                </li>
+                <li class="fr">
+                    <a href="#">传承人</a>
+                </li>
+                <li class="fr">
                     <a href="#">展览及活动</a>
+                </li>
+                <li class="fr">
+                    <a href="#">河北非遗</a>
 
                 </li>
-                <li class="fl">
-                    <a href="#">认识我们</a>
+                <li class="fr">
+                    <a href="#">首页</a>
                 </li>
             </ul>
 
@@ -46,7 +69,7 @@
 
     <!-- 页面内容 -->
     {% block main %}
-    <div class="lose">
+    <div class="lose main_bg">
         hhh页面丢了
     </div>
     {% endblock main %}
@@ -67,6 +90,8 @@
 </div>
 
 </body>
+    <script type="text/javascript" src="{% static 'js/jquery-1.12.4.min.js' %}"></script>
+    <script type="text/javascript" src="{% static 'js/base.js' %}"></script>
     {% block js %}
     <!-- 页面用到的js文件 -->
     {% endblock js %}

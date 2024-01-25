@@ -41,14 +41,14 @@
                 <!-- 河北梆子 Hebei Clapper Opera  -->
                 <!-- 做等长or适应图片长度？ -->
                 <!-- 层次：色块、图片、名称 -->
-                <div class="subwork">
+                <div class="subwork" onclick="click_masterpieces()">
                     <div class="color"></div>
                     <div class="img">
                         <img src="{% static 'img/HebeiClapperOpera/Hebei_YZL.jpg' %}">
                     </div>
                     <div class="txt">河北梆子</div>
                 </div>
-                <!-- 乐亭泥人 Laoting clay figure -->
+                <!-- 乐亭泥人 Laoting Clay Figure -->
                 <div class="subwork">
                     <div class="color"></div>
                     <div class="img">
@@ -56,7 +56,7 @@
                     </div>
                     <div class="txt">乐亭泥人</div>
                 </div>
-                <!-- 皮影戏 shadow puppets -->
+                <!-- 皮影戏 Shadow Puppets -->
                 <div class="subwork">
                     <div class="color"></div>
                     <div class="img">
@@ -64,7 +64,7 @@
                     </div>
                     <div class="txt">皮影戏</div>
                 </div>
-                <!-- 乐亭泥人 Laoting clay figure -->
+                <!-- 衡水内画 Hengshui Interior Painting -->
                 <div class="subwork">
                     <div class="color"></div>
                     <div class="img">
@@ -72,7 +72,7 @@
                     </div>
                     <div class="txt">乐亭泥人</div>
                 </div>
-                <!-- 乐亭泥人 Laoting clay figure -->
+                <!-- 京剧 Peking Opera -->
                 <div class="subwork">
                     <div class="color"></div>
                     <div class="img">
@@ -80,7 +80,7 @@
                     </div>
                     <div class="txt">乐亭泥人</div>
                 </div>
-                <!-- 乐亭泥人 Laoting clay figure -->
+                <!-- 吴桥杂技 Wuqiao Acrobatics -->
                 <div class="subwork">
                     <div class="color"></div>
                     <div class="img">
@@ -120,16 +120,68 @@
                 <!-- 左边：人物图片展示 -->
                 <!-- 层次：人物图（抠图） -->
                 <div class="img fl">
-                    <img src="{% static 'img/index/craftsman/皮影：王彪.png' %}">
+                    <img src="{% static 'img/index/craftsman/皮影戏：王彪.png' %}">
+                    <!-- <img src="static/img/index/craftsman/皮影：王彪.png"> -->
                 </div>
                 <!-- 右侧：人物名称 -->
                 <!-- 图片没做 -->
                 <div class="man_name">
-                    <!-- 第一个: 竖线 名字 -->
+                    <!-- html标志: 竖线 名字 -->
                     <div class="subname fl" >
                         <div class="line"></div>
                         <div class="name">人丢了</div>
                     </div>
+                    <!-- 第二个: 竖线 名字 -->
+                    <div class="subname fl" >
+                        <div class="line"></div>
+                        <div class="name">刘俊英</div>
+                    </div>
+                    <!-- 第三个: 竖线 名字 -->
+                    <div class="subname fl" >
+                        <div class="line"></div>
+                        <div class="name">赵玉明</div>
+                    </div>
+                    <!-- 第四个: 竖线 名字 -->
+                    <div class="subname fl" >
+                        <div class="line"></div>
+                        <div class="name">董壮壮</div>
+                    </div>
+                    <!-- 第五个: 竖线 名字 -->
+                    <div class="subname fl" >
+                        <div class="line"></div>
+                        <div class="name">王自勇</div>
+                    </div>
+                    <!-- 第六个: 竖线 名字 -->
+                    <div class="subname fl" >
+                        <div class="line"></div>
+                        <div class="name">粘跃峰</div>
+                    </div>
+                    <!-- 第七个: 竖线 名字 -->
+                    <div class="subname fl" >
+                        <div class="line"></div>
+                        <div class="name">朱绍玉</div>
+                    </div>
+                    <!-- 第八个: 竖线 名字 -->
+                    <div class="subname fl" >
+                        <div class="line"></div>
+                        <div class="name">张幼麟</div>
+                    </div>
+                    <!-- 第九个: 竖线 名字 -->
+                    <div class="subname fl" >
+                        <div class="line"></div>
+                        <div class="name">王彪</div>
+                    </div>
+                    <!-- 第十个: 竖线 名字 -->
+                    <div class="subname fl" >
+                        <div class="line"></div>
+                        <div class="name">王海燕</div>
+                    </div>
+                    <!-- 第十一个: 竖线 名字 -->
+                    <div class="subname fl" >
+                        <div class="line"></div>
+                        <div class="name">王保合</div>
+                    </div>
+                    
                     
                 </div>
 
@@ -140,7 +192,62 @@
 
         <!-- 展览及活动 Exhibitions and Events -->
         <!-- 写死 -->
-        <div></div>
+        <div class="cont3">
+            <div class="subtitle clearfix">
+                <!-- 小图标 标题 -->
+                <div>
+                    <div class="icon fl"> </div>
+                    <div class="txt">活动</div>
+                </div>
+            </div>
+            <!-- 内容 -->
+            <div class="events clearfix">
+                <div class="subevent">
+                    <a href="#">
+                        <span class="cir"></span>
+                        <span class="text">非遗文化旅游</span>
+                    </a>
+                </div>
+                <div class="subevent">
+                    <a href="#">
+                        <span class="cir"></span>
+                        <span class="text">冬游河北过大年</span>
+                    </a>
+                </div>
+                <div class="subevent">
+                    <a href="#">
+                        <span class="cir"></span>
+                        <span class="text">我在石家庄过大年</span>
+                    </a>
+                </div>
+                <div class="subevent">
+                    <a href="#">
+                        <span class="cir"></span>
+                        <span class="text">文化和自然遗产日</span>
+                    </a>
+                </div>
+                <div class="subevent">
+                    <a href="#">
+                        <span class="cir"></span>
+                        <span class="text">非遗集市</span>
+                    </a>
+                </div>
+                <div class="subevent">
+                    <a href="#">
+                        <span class="cir"></span>
+                        <span class="text">陕北榆林过大年</span>
+                    </a>
+                </div>
+                <div class="subevent">
+                    <a href="#">
+                        <span class="cir"></span>
+                        <span class="text">新春非遗之夜</span>
+                    </a>
+                </div>
+
+            </div>
+
+        </div>
 
     </div>
               
@@ -150,39 +257,10 @@
 
 
 {% block js %}
-    <script type="text/javascript" src="{% static 'js/jquery-1.12.4.min.js' %}"></script>
+    <!-- <script type="text/javascript" src="{% static 'js/jquery-1.12.4.min.js' %}"></script> -->
     <script src="{% static 'js/jquery.cookie.min.js' %}"></script>
     <script type="text/javascript" src="{% static 'js/index.js' %}"></script>
     <!-- <script type="text/javascript" src="{% static 'js/jquery-1.12.4.min.js' %}"></script> -->
 
-    <script>
-    // $(document).ready(function (){
-    //     console.log('craftaman_img:::')
-    //     $('.cont2 .subname').click(function(){
-    //         console.log('11111111111')
-    //     })
-    //     // 获取鼠标悬停位置的姓名
-    //     // $(".subname").hover(function () {
-    //     //     console.log('hover_in:::::')
-    //     //     var   txt = $(this).text(); 
-    //     //     console.log('txt', txt);
-    //     // },function(){
-    //     //     // console.log('hover_out:::::')
-    
-    //     // });
-    //     $(".subname").on({
-    //         mouseover : function(){
-    //             console.log('hover_in:::::')
-    //         },
-    //         mouseout : function(){
-    //             console.log('hover_out:::::')
-    //         }
-    //     })
-    
-    //     // 更改<img>的src
-    //     $('.cont2 .img img')
-    
-    // })
-    // </script>
 
 {% endblock js %}

@@ -10,7 +10,8 @@ from django.db import models
 # 非遗名录 master pieces
 class MasterPieces(models.Model):
     pieces_id = models.IntegerField(null=False, primary_key=True, verbose_name='pieces_id')
-    pieces_name = models.CharField(max_length=64, null=False, verbose_name='项目名称')
+    pieces_name_ch = models.CharField(max_length=64, null=False, verbose_name='项目名称')
+    pieces_name_en = models.CharField(max_length=64, null=False, verbose_name='英文名')
 
     def __unicode__(self):  # __str__ on Python 3
         return self.MasterPieces
@@ -18,7 +19,8 @@ class MasterPieces(models.Model):
 # 传承人名录 craftsman
 class Craftsman(models.Model):
     craftsman_id = models.IntegerField(null=False, primary_key=True, verbose_name='craftsman_id')
-    craftsman_name = models.CharField(max_length=64, null=False, verbose_name='姓名')
+    craftsman_name_ch = models.CharField(max_length=64, null=False, verbose_name='姓名')
+    craftsman_name_en = models.CharField(max_length=64, null=False, verbose_name='英文名')
     item = models.ForeignKey(MasterPieces, on_delete=models.DO_NOTHING, verbose_name='传承项目')
 
 # 活动events

@@ -8,17 +8,60 @@
 
 
 {% block css %}
-    <link rel="stylesheet" type="text/css" href="{% static 'css/ShadowPuppets.css' %}">
+<link rel="stylesheet" type="text/css" href="{% static 'css/works_detail/HebeiClapperOpera.css' %}">
 {% endblock css %}
 
 
 
 {% block main %}
-    <div>
-       <!-- 在这个div里写页面的内容 -->
-       皮影戏详情页
+<div  class="main_bg">
+    <!-- 在这个div里写页面的内容 -->
+    <!-- 标题 -->
+    <div class="title">
+         <div class="subtitle">皮影戏</div>
+     </div>
+     <!-- 上半部分 -->
+     <div class="cont1">
+         <!-- 左: 图片 -->
+         <div class="img fl">
+             <img src="{% static '/img/works_detail/ShadowPuppets/ShadowPuppets1.png' %}">
+         </div>
+         <!-- 右：文字 -->
+         <div class="txt">
+             <div class="grap">
+                中国皮影戏是一种以皮制或纸制的彩色影偶形象，伴随音乐和演唱进行表演的戏剧形式。
+             </div>
+             <div class="grap">
+                皮影艺人在幕后用木杆操控影偶，通过光线照射在半透明的幕布上创造出动态的形象。
+             </div>
+         </div>
+     </div>
+     <!-- 下半部分 -->
+     <div class="cont2">
+         <!-- 右：图片 -->
+         <div class="img fr">
+             <img src="{% static '/img/works_detail/ShadowPuppets/ShadowPuppets2.png' %}">
+         </div>
+         <!-- 左：文字 -->
+         <div class="txt">
+             <div class="grap">
+                皮影戏最早诞生在两千年前的西汉，又称羊皮戏，俗称人头戏影子戏，驴皮影。据史书记载，皮影戏始于西汉，兴于唐朝，盛于清代，元代时期传至西亚和欧洲，可谓历史悠久，源远流长。
+             </div>
+         </div>
+     </div>
+     <!-- 末尾 -->
+     <div class="cont3">
+         <div class="grap">
+            许多老艺人可以表演几十部传统剧目，这些作品有的通过口头传承，有的以书面形式呈现。
+            皮影艺人身怀绝技，诸如可即兴演唱，真假声转换，一人同时操纵数个影偶，还能够演奏不同乐器。
+            许多皮影艺人还会雕刻皮影，这些影人有十二到二十四个可活动的关节，七到九人的大剧团或只有二到五人的小戏班都可以表演皮影戏，主要在娱乐或宗教仪式、婚礼、葬礼和其他特殊场合进行表演。
+         </div>
+         <div class="grap">
+            2011年，中国皮影戏入选人类非物质文化遗产代表作名录。
+         </div>
+     </div>
 
-    </div>
+</div>
               
 
 {% endblock main %}}

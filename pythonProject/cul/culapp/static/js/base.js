@@ -31,29 +31,39 @@ function timeText(){
 
 // 判断是否登录
 function logged(){
+    console.log('logged')
     $.ajax(
         {
-            url:'logged',
+            url:'../logged',
             type:'get',
             success:function(response){
-                console.log(response)
+                console.log('logged-response:', response.username)
                 if(response.username != null){
-                    $('#login').text(response.username)
+                    $('#login').append(
+                        '<a href="#" id="login">'
+                        +   response.username
+                        + '</a>'
+                    )
+                    if(response.username == '传承人xxx'){
+                        $('.m2').append(
+                            '<li>'
+                            +   '<a href="../chat/craftsman">'
+                            +       '手工艺者'
+                            +   '</a>'
+                            + '</li>'
+                        )
+                    }
                 }
                 else{
-                    $('#login').text('登录')
+                    $('#login').append(
+                        '<a href="../login" onclick="click_login()" id="login">'
+                        +   '登录'
+                        + '</a>'
+                    )
                 }
             }
 
     }
-    )
-    $.ajax(
-        {
-            url:'get_craftsman',
-            type:'get',
-            success:function(response){
-                        
-            }
-        }
-        )      
+    )     
 }
+

@@ -8,7 +8,6 @@
 }
 
 
-
 .img{
     width: 500px;
     margin: 20px 40px;
@@ -24,12 +23,16 @@
 
 .cont1{
     margin: 40px  0 20px 0;
-    height: 300px;
+    height: 400px;
 }
 
 .cont2{
-    margin: 20px 0 80px 0;
+    margin: 20px 0 20px 0;
     height: 500px;
+}
+
+.cont3{
+    margin: 20px  0 80px 0;
 }
 
 .txt{
@@ -39,6 +42,7 @@
 }
 
 .grap{
+    text-indent:2em;
     font-size: 24px;
     line-height: 48px;
     color: #000;

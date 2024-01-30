@@ -1,0 +1,59 @@
+{% extends "base.html" %}
+{% load static %}
+
+
+{% block title %}
+    交流沟通-群众
+{% endblock title %}
+
+
+{% block css %}
+    <link type="text/css" rel="stylesheet" href="{% static 'css/chat/craftsman.css' %}">
+{% endblock css %}
+
+
+
+{% block main %}
+<div class="main_bg">
+    <!-- 标题 -->
+    <div class="title">
+        <div class="subtitle">交流沟通-群众</div>
+    </div>
+    <main onclick="mainCLick(event)" style="text-align: left">
+        <hr/>
+        <!-- 输入区域 -->
+        <div class="form_item">
+            <textarea id="comment_space" onkeyup="readKey(event)" placeholder="请输入您要评论的内容"></textarea>
+        </div>
+        <!-- 提交区域 -->
+        <div id="button_submit_div">
+            <div style="position: relative">
+                <span style="color: lightgray; margin-right: 20px">
+                    还可以输入 <span id="char_count">1000</span> 个字符
+                </span>
+                <button class="confirm_btn" id="cancel_reply" onclick="cancelReply(event, this)" style="margin-right: 20px; display: none">取消回复</button>
+                <button onclick="emojiTrigger(event)" class="emoji_trigger_btn">🙂</button>
+                <button class="confirm_btn" id="submit_button" onclick="submitTree(event)">提交</button>
+                <div id="emoji_board" class="emoji_board">
+                </div>
+            </div>
+        </div>
+        <hr/>
+        <!-- 评论信息 -->
+        <div id="comment_view">
+        </div>
+    </main>
+</div>
+          
+
+    </div>
+              
+
+{% endblock main %}}
+
+
+
+{% block js %}
+    <script type="text/javascript" src="{% static 'js/chat/craftsman.js' %}"></script>
+{% endblock js %}
+

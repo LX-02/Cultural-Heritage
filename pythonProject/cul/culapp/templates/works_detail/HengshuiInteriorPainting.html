@@ -8,15 +8,57 @@
 
 
 {% block css %}
-    <link rel="stylesheet" type="text/css" href="{% static 'css/HengshuiInteriorPainting' %}">
+    <link rel="stylesheet" type="text/css" href="{% static 'css/works_detail/HebeiClapperOpera.css' %}">
 {% endblock css %}
 
 
 
 {% block main %}
-    <div>
+    <div  class="main_bg">
        <!-- 在这个div里写页面的内容 -->
-       衡水内画详情页
+               <!-- 标题 -->
+               <div class="title">
+                <div class="subtitle">衡水内画</div>
+            </div>
+            <!-- 上半部分 -->
+            <div class="cont1">
+                <!-- 左: 图片 -->
+                <div class="img fl">
+                    <img src="{% static '/img/works_detail/HengshuiInteriorPainting/HengshuiInteriorPainting1.png' %}">
+                </div>
+                <!-- 右：文字 -->
+                <div class="txt">
+                    <div class="grap">
+                        衡水内画，是一种源自中国河北省衡水市的传统艺术，主要是在鼻烟壶内壁上进行绘画创作。这种艺术形式不仅在中国，而且在国际上也享有盛誉。
+                    </div>
+                    <div class="grap">
+                        衡水内画的特点是立意深邃、构图严谨、线描技法丰富，以及设色协调精润，雅俗共赏。
+                        这种艺术形式融合了中国国画的技法，如皱、擦、染、点、勾、撕等，使得作品呈现出极高的艺术水平。其中，冀派内画以人物肖像见长，特别是婴戏图和百子图最为著名，展现了其独特的艺术特点。
+                    </div>
+                </div>
+            </div>
+            <!-- 下半部分 -->
+            <div class="cont2">
+                <!-- 右：图片 -->
+                <div class="img fr">
+                    <img src="{% static '/img/works_detail/HengshuiInteriorPainting/HengshuiInteriorPainting2.png' %}">
+                </div>
+                <!-- 左：文字 -->
+                <div class="txt">
+                    <div class="grap">
+                        衡水内画的一大特色是使用特制的金属杆钩毛笔进行创作。这种笔的设计灵活，能够在狭小的空间内自如地绘制精美的图案。由于画作是在鼻烟壶的内壁上完成的，因此需要极高的技艺和耐心。画家们通常需要长时间屏气凝神地坐着绘画，任何轻微的手抖都可能导致作品毁于一旦。
+                    </div>
+                </div>
+            </div>
+            <!-- 末尾 -->
+            <div class="cont3">
+                <div class="grap">
+                    衡水内画的创始人是王习三，他师从京派老艺人叶晓峰、叶莑祺。王习三在继承叶派厚朴古雅的传统画法基础上，融入了鲁派细腻流畅的传统画法，并成功地将油彩技法引入内画，使得作品在视觉上更加丰富和生动。
+                </div>
+                <div class="grap">
+                    衡水内画不仅仅局限于鼻烟壶，还涵盖了其他多种承载方式，如屏风画等。作为国家级非物质文化遗产，衡水内画在当代中国内画中占据了重要地位，拥有众多一流的画师和丰富多样的作品。
+                </div>
+            </div>
 
     </div>
               

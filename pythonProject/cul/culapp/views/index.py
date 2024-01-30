@@ -14,14 +14,35 @@ def base(request):
     print('base ok')
     return render(request, 'base.html')
 
+def login(request):
+    return render(request, 'login.html')
+
 def index(request):
+    if request.method == 'POST':
+        print('LOGIN.POST:')
+        username = request.POST.get('username')
+        password = request.POST.get('password')
+        user = models.User.objects.filter(username=username)
+        # if username == '' or password == '':
+        #     return
+        if user:
+            if user.first().password == password:
+                request.session['is_login'] = True
+                request.session['user_id'] = user.first().user_id
+                request.session['username'] = user.first().username
+                # request.session['position_choice'] = user.first().position
+                request.session['position'] = user.first().get_position_display()
+                # request.session['workspace'] = user.first().workspace
+                return render(request,'index.html')
+    # return render(request, 'login.html')
     return render(request, 'index.html')
 
 def logged(request):
-    if request.user.is_authenticated:
-        username = request.user.username
-    else:
-        username = None
+    username = request.session.get('username')
+    # if request.user.is_authenticated:
+    #     username = request.user.username
+    # else:
+    #     username = None
     print('username:', username)
     return JsonResponse({'username':username})
 
@@ -152,15 +173,3 @@ def get_detailurl_craftsman(request):
         print(name_en)
         url = 'craftsman_detail/' + name_en
         return JsonResponse({'url': url})
-        #
-        #
-        # work = models.MasterPieces.objects.filter(pieces_name_ch = name_ch)
-        # # name_en = {}
-        # print('work:', work)
-        # for value in work:
-        #     name_en = model_to_dict(value)['pieces_name_en']
-        # print(name_en)
-        # name_en= ''.join(name_en.split())
-        # url = 'works_detail/' + name_en
-        # print('url:', url)
-        # return  JsonResponse({'url':url})

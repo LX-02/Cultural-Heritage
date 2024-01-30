@@ -8,7 +8,7 @@ body{
     font-family: cursive;
     display: flex;
     flex-direction: column;
-    /* min-height: 100%; */
+    min-height: 100%;
     /* position: relative; */
     /* padding-bottom: 240px;  */
     /* display: flex; */
@@ -76,20 +76,24 @@ body, ul, li{
     line-height: 60px;
     margin-right: 80px;
 }
-.nav-r .ul2 .m1{
+.nav-r .ul2 li{
     margin: 0 26px;
     position: relative;
 }
-.nav-r .ul2 .m1 a:hover{
+.nav-r .ul2 li a:hover{
     /* background: #890D00; */
     /* color:#ffffff; */
     color: #890D00;
     border-bottom: #890D00 2px solid;
 }
 .nav-r .m2{
+    width: 120px;
+    font-size: 16px;
+    line-height: 40px;
     display: none;
+    z-index: 10;
     /* 设置初始为不显示 */
-    /* position: relative; */
+    position: absolute;
 }
 #chat:hover .m2{
     display: block;

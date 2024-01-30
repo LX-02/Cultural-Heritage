@@ -28,56 +28,56 @@
         <div class="nav-r fr">
             <!-- 第一排（小）：交流（icon）、时间、登录（已登录显示用户名） -->
             <ul class="ul1">
-                <li class="fr"  style="margin-right: 32px;">
-                    <a href="#" id="login">
+                <li id="login" class="fr m1"  style="margin-right: 32px;">
+                    <!-- <a href="#" id="login">
                         登录
-                    </a>
+                    </a> -->
                 </li>
-                <li class="fr">
+                <li class="fr m1">
                     <a href="#" id="time">
                         时间
                     </a>
                 </li>
-                <li class="fr iconfont">
+                <li class="fr m1"  style="margin-right: 32px;">
+                    <a href="{% url 'chat/message'  %}">
+                        留言
+                    </a>
+                </li>
+                <li class="fr m1 iconfont"  id="chat">
                     <a href="#">
                         &#xe6b8;
+                        <!-- 二级目录 -->
+                        <ul class="m2" >
+                            <!-- <li>
+                                <a href="{% url 'chat/craftsman'  %}">
+                                    手工艺者
+                                </a>
+                            </li> -->
+                            <li>
+                                <a href="{% url 'chat/masses'  %}">
+                                    群众
+                                </a>
+                            </li>
+                        </ul>
                     </a>
                 </li>
             </ul>
             <!-- 第二排（小）： -->
             <ul class="ul2 clearfix">
-                <li class="fr m1">
+                <li class="fr">
                     <a href="#">认识我们</a>
                 </li>
-                <li class="fr m1">
+                <li class="fr">
                     <a href="#">传承人</a>
                 </li>
-                <li class="fr m1" id="chat">
-                    <!-- <a href="#"> -->
-                        交流沟通
-                        <ul>
-                            <li class="m2">
-                                <a href="#">
-                                    手工艺者
-                                </a>
-                            </li>
-                            <li class="m2">
-                                <a href="#">
-                                    群众
-                                </a>
-                            </li>
-                        </ul>
-
-                    <!-- </a> -->
-                </li>
-                <!-- <li class="fr m1">
+                <li class="fr">
                     <a href="#">展览及活动</a>
-                </li> -->
-                <li class="fr m1">
+                </li>
+                <li class="fr">
                     <a href="#">河北非遗</a>
 
                 </li>
-                <li class="fr m1">
+                <li class="fr">
                     <a href="{% url 'index' %}">首页</a>
                 </li>
             </ul>

@@ -1,0 +1,70 @@
+{% extends "base.html" %}
+{% load static %}
+
+
+{% block title %}
+    河北梆子
+{% endblock title %}
+
+
+{% block css %}
+    <link rel="stylesheet" type="text/css" href="{% static 'css/works_detail/HebeiClapperOpera.css' %}">
+{% endblock css %}
+
+
+
+{% block main %}
+    <div class="main_bg">
+       <!-- 在这个div里写页面的内容 -->
+        <!-- 标题 -->
+        <div class="title">
+            <div class="subtitle">河北梆子</div>
+        </div>
+        <!-- 上半部分 -->
+        <div class="cont1">
+            <!-- 左: 图片 -->
+            <div class="img fl">
+                <img src="{% static '/img/works_detail/HebeiClapperOpera/HebeiClapperOpera1.jpg' %}">
+            </div>
+            <!-- 右：文字 -->
+            <div class="txt">
+                <div class="grap">
+                    河北梆子是河北省的传统戏剧。
+                </div>
+                <div class="grap">
+                    河北梆子是中国汉族地方戏曲之一，是河北省的主要地方剧种，是梆子声腔的一个重要支脉，是“山陕梆子”传入河北之后经河北人民培育而形成的。
+                    2018年11月，《河北梆子》入选河北省第五批省级非遗项目。
+                </div>
+            </div>
+        </div>
+        <!-- 下半部分 -->
+        <div class="cont2">
+            <!-- 右：图片 -->
+            <div class="img fr">
+                <img src="{% static '/img/works_detail/HebeiClapperOpera/HebeiClapperOpera2.jpg' %}">
+            </div>
+            <!-- 左：文字 -->
+            <div class="txt">
+                <div class="grap">
+                    河北梆子由山陕梆子演变而来，形成于清道光年间，旧时称秦腔、山陕梆子、直隶梆子、京梆子、梆子腔，19世纪60年代末70年代初进入繁荣阶段；1931年，日本帝国主义开始侵略中国导致河北梆子走向衰落；1949年新中国成立后逐渐开始复苏，正式定名河北梆子，是我国戏曲梆子声腔系统的重要支脉。
+                </div>
+            </div>
+        </div>
+        <!-- 末尾 -->
+        <div class="cont3">
+            <div class="grap">
+                河北梆子曾出现过三个流派，包括直隶老派、山陕派和直隶新派，这三个派别标志着河北梆子历史的不同发展阶段。河北梆子主要流传于北京、天津、河北广大乡镇一带，同时山东、河南、黑龙江、吉林、辽宁以及内蒙古等地也有流传。
+            </div>
+        </div>
+
+    </div>
+              
+
+{% endblock main %}}
+
+
+
+{% block js %}
+
+{% endblock js %}
+

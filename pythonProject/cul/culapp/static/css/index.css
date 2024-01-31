@@ -1,0 +1,184 @@
+
+@font-face {
+    font-family: "iconfont logo";
+    src: url('https://at.alicdn.com/t/font_985780_km7mi63cihi.eot?t=1545807318834');
+    src: url('https://at.alicdn.com/t/font_985780_km7mi63cihi.eot?t=1545807318834#iefix') format('embedded-opentype'),
+      url('https://at.alicdn.com/t/font_985780_km7mi63cihi.woff?t=1545807318834') format('woff'),
+      url('https://at.alicdn.com/t/font_985780_km7mi63cihi.ttf?t=1545807318834') format('truetype'),
+      url('https://at.alicdn.com/t/font_985780_km7mi63cihi.svg?t=1545807318834#iconfont') format('svg');
+}
+.btn{
+    font-family: "iconfont" !important;
+    /* font-size: 32px; */
+    width: 40px;
+    height: 40px;
+    color: #890D00;
+    line-height: 40px;
+    border: solid 2px #890D00;
+    border-radius: 50%;
+    text-align: center;
+    margin: 0px 6px;
+}
+.subtitle{
+    height: 60px;
+    margin: 60px 0px 0px 0px;
+}
+/* 暂时用背景色 */
+.subtitle .icon{
+    width: 20px;
+    height: 20px;
+    background: #890D00 ;
+    margin: 10px 20px 0px 0px;
+}
+.subtitle .txt{
+    font-size: 32px;
+    line-height: 40px;
+}
+.work{
+    display: flex;
+    overflow: auto;
+    /* 隐藏滚动条 */
+    scrollbar-width: none;          /* firefox */
+    -ms-overflow-style: none;       /* IE 10+ */
+    overflow-y: hidden;
+    overflow-x: auto; 
+    margin-right: 40px;
+
+}
+/* 隐藏滚动条 */
+.work::-webkit-scrollbar {
+    display: none; /* Chrome Safari */
+}
+.subwork{
+    width: 340px;
+    height: 380px;
+    padding: 60px 20px 20px 20px;
+    margin: 40px;
+    /* border: solid 1px black; */
+    background: rgba(255, 255, 255, 0.7);
+    box-shadow: 12px 12px 14px 2px rgba(221, 204, 204), -1em 0.4em 14px 2px rgba(221, 204, 204);
+    box-shadow: rgba(221, 204, 204) 14px 14px 29px 10px;
+}
+.work .color{
+    width: 300px;
+    height: 40px;
+    margin: 0px 20px;
+    background: #890D00;
+}
+.work .img{
+    height: 240px;
+}
+.work .img img{
+    width: 300px;
+    margin: 0px 20px 0px 20px;
+}
+.work .txt{
+    height: 100px;
+    font-size: 32px;
+    line-height: 100px;
+    text-align: center;
+    margin: 0 40px;
+    border-top: solid #890D00 2px;
+}
+/* 手工艺者与群众的联系 */
+/* 手工艺者 craftsman */
+.cont2 .man{
+    height: auto;
+}
+.cont2 .man{
+    height: 600px;
+    /* background: rgba(137, 13, 0, 0.1); */
+    /* opacity: 0.5; */
+}
+.cont2 .img{
+    width: 600px;
+    text-align: center;
+    line-height: 600px;
+    /* width: 100px; */
+    /* height: 100px; */
+    /* border: #890D00 solid 4px; */
+    /* border-radius: 50%; */
+}
+.cont2 .img img{
+    width: 50%;
+    /* position: absolute; */
+}
+.cont2 .line{
+    height: 600px;
+    border-left: rgba(137, 13, 0, 0.3) solid 2px;
+    margin-left: 40px;
+}
+.cont2 .subname{
+    width: 50px;
+    height: 600px;
+    margin-right: 40px;
+}
+.cont2 .man_name {
+    margin-left: 600px;
+    display: flex;
+    overflow: auto;
+    /* 隐藏滚动条 */
+    scrollbar-width: none;          /* firefox  */
+    -ms-overflow-style: none;       /* IE 10+ */
+    overflow-y: auto;
+    overflow-x: hidden; 
+
+
+}
+/* 隐藏滚动条 */
+.cont2 .man_name::-webkit-scrollbar {
+    /* display: none; Chrome Safari */
+}
+/* 鼠标悬停 改变竖线颜色 */
+.cont2 .subname:hover .line{
+    border-left-color: rgba(137, 13, 0, 1);
+}
+/* 鼠标悬停 改变名字边框颜色 */
+.cont2 .subname:hover .name{
+    border-color: rgba(137, 13, 0, 1);
+}
+.cont2 .man .name{
+    font-size: 24px;
+    border: rgba(137, 13, 0, 0.3) 2px solid;
+    border-radius: 40px ;
+    background: #F0E4E4;
+    padding: 16px 6px;
+    margin: -400px 20px 0px 20px;   /* 位置高度改成随机!!!!!!!!!!!!!! */
+
+    /* 文字竖排 */
+    word-wrap: break-word;      /*英文的时候需要加上这句，自动换行*/ 
+    /*自测了这句话没啥用*/
+    writing-mode: vertical-rl;  /*从左向右 从右向左是 writing-mode: vertical-rl;*/  
+    writing-mode: tb-rl;        /*IE浏览器的从左向右 从右向左是 writing-mode: tb-rl；*/ 
+    text-align: center;
+    display:flex;
+    -webkit-display:flex;
+    flex-direction:column; 
+    /* align-content: center; */
+    /* vertical-align: middle; */
+    justify-content:center;
+}
+
+/* 活动Events */
+.cont3 .events{
+    margin-bottom: 100px;
+}
+.cont3 .subevent{
+    line-height: 80px;
+    background: rgba(255, 255, 255, 0.7);
+    box-shadow: 12px 12px 14px 2px rgba(221, 204, 204), -1em 0.4em 14px 2px rgba(221, 204, 204);
+    box-shadow: rgba(221, 204, 204) 14px 14px 29px 10px;
+    margin: 20px;
+    padding: 0 30px;
+    display: inline-block;
+}
+.cont3 .cir{
+    width: 20px;
+    height: 20px;
+    background: #890D00;
+    border-radius: 50%;
+    display: inline-block;
+}
+.cont3 .text{
+    font-size: 32px;
+}

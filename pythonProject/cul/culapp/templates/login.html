@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+{% load static%}
+<head>
+    <title>登录</title>
+	<meta charset="utf-8">
+    <!-- <link rel="shortcut icon" href="{% static 'img/base/favicon.ico' %}" type="image/x-icon"> -->
+    <link rel="stylesheet" type="text/css" href="{% static 'css/login.css' %}">
+    <link rel="stylesheet" type="text/css" href="{% static 'css/base.css' %}">
+</head>
+<body class="bg">
+    <div id="boundary">
+        <div>
+            <form action="{% url 'index' %}" method="post">
+                {% csrf_token %}
+                <div class="clearfix text ">
+                    <label class="font" for="username">用户名:</label>
+                    <div class="input fr">
+                        <input name="username" type="text">
+                    </div>
+                </div>
+                <div class="clearfix text">
+                    <label class="font" for="password">密&nbsp; 码:</label>
+                    <div class="input fr">
+                        <input name="password" type="password">
+                    </div>
+                </div>
+                <div id="enter">
+                    <button class="font">提交</button>
+                </div>
+                <div class="font register">注册</div>
+            </form>
+        </div>
+
+
+    </div>
+</body>

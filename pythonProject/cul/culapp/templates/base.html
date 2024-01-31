@@ -1,0 +1,116 @@
+<!DOCTYPE html>
+{% load static %}
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>
+        {% block title %}
+        <!-- 每个页面的题目 -->
+            非遗-base-nav
+        {% endblock title %}
+    </title>
+    <meta charset="utf-8">
+    {% block css %}
+    <!-- 页面用到的Css文件 -->
+    {% endblock css %}
+    <link rel="stylesheet" type="text/css" href="{% static 'css/base.css' %}">
+    <link rel="stylesheet" type="text/css" href="{% static 'css/reset.css' %}">
+    <link rel="stylesheet" type="text/css" href="{% static 'fonts/fonts/iconfont.css' %}">
+</head>
+<body class="bg">
+<div>
+    <!--    导航栏-->
+    <div class="nav clearfix">
+        <!-- 左侧：名称、logo（无） -->
+        <div class="logo fl">LOGO</div>
+        <div class="nav-l fl">河北省乡村非遗文化</div>
+        <!-- 右侧:两排-->
+        <div class="nav-r fr">
+            <!-- 第一排（小）：交流（icon）、时间、登录（已登录显示用户名） -->
+            <ul class="ul1">
+                <li id="login" class="fr m1"  style="margin-right: 32px;">
+                    <!-- <a href="#" id="login">
+                        登录
+                    </a> -->
+                </li>
+                <li class="fr m1">
+                    <a href="#" id="time">
+                        时间
+                    </a>
+                </li>
+                <li class="fr m1"  style="margin-right: 32px;">
+                    <a href="{% url 'chat/message'  %}">
+                        留言
+                    </a>
+                </li>
+                <li class="fr m1 iconfont"  id="chat">
+                    <a href="#">
+                        &#xe6b8;
+                        <!-- 二级目录 -->
+                        <ul class="m2" >
+                            <!-- <li>
+                                <a href="{% url 'chat/craftsman'  %}">
+                                    手工艺者
+                                </a>
+                            </li> -->
+                            <li>
+                                <a href="{% url 'chat/masses'  %}">
+                                    群众
+                                </a>
+                            </li>
+                        </ul>
+                    </a>
+                </li>
+            </ul>
+            <!-- 第二排（小）： -->
+            <ul class="ul2 clearfix">
+                <li class="fr">
+                    <a href="#">认识我们</a>
+                </li>
+                <li class="fr">
+                    <a href="#">传承人</a>
+                </li>
+                <li class="fr">
+                    <a href="#">展览及活动</a>
+                </li>
+                <li class="fr">
+                    <a href="#">河北非遗</a>
+
+                </li>
+                <li class="fr">
+                    <a href="{% url 'index' %}">首页</a>
+                </li>
+            </ul>
+
+        </div>
+    </div>
+
+    <!-- 页面内容 -->
+    {% block main %}
+    <div class="lose main_bg">
+        hhh页面丢了
+    </div>
+    {% endblock main %}
+
+    <!-- 页脚 -->
+    <div class="footer">
+        <!-- 页脚内容 -->
+        <div class="content">
+            <div>邮箱：xxxxxxxxx@foxmail.com</div>
+            <div>链接：xxx乡村非遗</div>
+            <div>联系电话：0319-xxxxxxx</div>
+            <div>版权所有：xxxxxxx</div>
+            <div>网站备案号：xxxxxxxxx</div>
+        </div>
+
+    </div>
+    
+</div>
+
+</body>
+    <script type="text/javascript" src="{% static 'js/jquery-1.12.4.min.js' %}"></script>
+    <script type="text/javascript" src="{% static 'js/base.js' %}"></script>
+    {% block js %}
+    <!-- 页面用到的js文件 -->
+    {% endblock js %}
+</html>

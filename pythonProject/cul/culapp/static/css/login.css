@@ -1,0 +1,87 @@
+
+#boundary{
+    width: 660px;
+    height: 460px;
+    margin: 100px auto;
+    border-radius: 30px;
+    /* border: solid 5px #3F3D35; */
+    background: rgba(255, 255, 255, 0.7);
+    box-shadow: 12px 12px 14px 2px rgba(221, 204, 204), -1em 0.4em 14px 2px rgba(221, 204, 204);
+    box-shadow: rgba(221, 204, 204) 14px 14px 29px 10px;
+}
+
+.font{
+    font-size: 28px;
+    font-family: cursive;
+}
+
+form{
+    width: 500px;
+    margin: 100px auto;
+    /* font-size: 28px; */
+    /* margin-top: 240px; */
+    /* margin-left: 240px; */
+}
+
+.text{
+    margin: 36px auto;
+}
+
+/* img{
+    height: 42px;
+    padding-top: 8px;
+} */
+
+/* .input{
+    background-image: url(../img/login/输入框.png);
+    background-repeat: no-repeat;
+    background-size: 100%;
+    width: 360px;
+} */
+
+label{
+    display: inline;
+    float: left;
+    line-height: 48px;
+    padding: 0 10px;
+}
+
+input{
+	border: 0px;
+    /* background: rgb(255,255,255,0.7) ; */
+	/* background-color: transparent; */
+	outline: none;
+    height: 48px;
+    /* color: #ffffff; */
+    font-weight: bold;
+    font-size: 24px;
+    padding-left: 32px;
+}
+
+button{
+    background: rgb(137,13,0);
+    color: #ffffff;
+    width: 200px;
+    height: 60px;
+	outline: none;
+    border: 0px;
+}
+
+#enter{
+    margin: 0px auto;
+    width: 200px;
+    color: #ffffff;
+    /* background: background: rgb(137,13,0);; */
+}
+
+.register{
+    font-size: 24px;
+    width: 200px;
+    text-align: center;
+    line-height: 40px;
+    margin: 30px auto;
+}
+
+.register:hover{
+    color: rgb(137,13,0);
+}

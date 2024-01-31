@@ -1,0 +1,58 @@
+.title{
+    height: 140px;
+    text-align: center;
+}
+.subtitle{
+    font-size: 48px;
+    line-height: 140px;
+}
+
+
+.img{
+    /* width: 500px; */
+    height: 400px;
+    margin: 20px 40px;
+    padding: 20px 20px;
+    background: rgba(255, 255, 255, 0.7);
+    box-shadow: 12px 12px 14px 2px rgba(221, 204, 204), -1em 0.4em 14px 2px rgba(221, 204, 204);
+    box-shadow: rgba(221, 204, 204) 14px 14px 29px 10px;
+}
+
+.img img{
+    height: 400px;
+    /* width: 500px; */
+}
+
+.cont1{
+    margin: 40px  0 10px 0;
+    height: 500px;
+}
+
+.cont2{
+    margin: 10px 0 20px 0;
+    height: 500px;
+}
+
+.cont3{
+    margin: 10px  0 80px 0;
+}
+
+.txt{
+    height: 400px;
+    padding: 100px 0px;
+    /* line-height: 400px; */
+}
+
+.grap{
+    text-indent:2em;
+    font-size: 24px;
+    line-height: 48px;
+    color: #000;
+    /* background-color: aquamarine; */
+    padding: 10px 0px;
+    /*这两行代码可以解决大部分场景下的换行问题*/
+    word-break: break-all;
+    word-wrap: break-word;
+    /*但在有些场景中，还需要加上下面这行代码*/
+    white-space: normal;
+}

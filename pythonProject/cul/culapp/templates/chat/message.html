@@ -1,0 +1,88 @@
+{% extends "base.html" %}
+{% load static %}
+
+
+{% block title %}
+    留言
+{% endblock title %}
+
+
+{% block css %}
+    <link rel="stylesheet" type="text/css" href="{% static 'css/chat/message.css' %}">
+{% endblock css %}
+
+
+
+{% block main %}
+    <div class="main_bg">
+        <!-- 在这个div里写页面的内容 -->
+        <!-- 标题 -->
+        <div class="title">
+            <div class="subtitle">留言</div>
+        </div>
+       <!-- 留言表单 -->
+       <form action="{% url 'chat/message/post_content' %}" method="post" class="smart-green">
+            <h1>留言信息</h1>
+            <!-- 姓名 -->
+            <label>
+                <span>
+                    姓名 :
+                </span>
+                <input id="name" type="text" name="name" class="error" placeholder="请输入您的姓名"/>
+                <div class="error-msg">
+                </div>
+            </label>
+            <!-- 邮箱 -->
+            <label>
+                <span>
+                    邮箱 :
+                </span>
+                <input id="email" type="email" value="" name="email" placeholder="请输入您的邮箱地址"/>
+                <div class="error-msg">
+                </div>
+            </label>
+            <!-- 部门选择 -->
+            <label>
+                <span>部门选择 :</span>
+                <select id="partment" name="partment">
+                    <option value="culture">文化局</option>
+                    <option value="film">广播电影电视局</option>
+                    <option value="travel">旅游局</option>
+                  </select>
+                <!-- <textarea id="message" name="message"  placeholder="请输入您的建议"></textarea> -->
+                <div class="error-msg"></div>
+            </label>
+            <div class="success-msg">
+            </div>
+            <!-- 内容 -->
+            <label>
+                <span>内容 :</span>
+                <textarea id="message" name="message"  placeholder="请输入您的建议"></textarea>
+                <div class="error-msg"></div>
+            </label>
+            <div class="success-msg">
+            </div>
+            <!-- 提交按钮 -->
+            <label>
+                <span>&nbsp;</span>
+                <input type="submit" class="button" value="提交"/>
+            </label>
+            <!-- 提交结果：成功 -->
+            <label class="post_result">
+                {{ post_result }}
+            </label>
+            {#避免提交表单时出现CSRF验证失败. 请求被中断.的403错误#}
+            {% csrf_token %}
+        </form>
+
+    </div>
+              
+
+{% endblock main %}
+
+
+
+{% block js %}
+
+{% endblock js %}
+
